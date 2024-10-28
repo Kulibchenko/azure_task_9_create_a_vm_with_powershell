@@ -41,7 +41,7 @@ $vnet = New-AzVirtualNetwork -ResourceGroupName $resourceGroupName `
 $pipaddr = New-AzPublicIpAddress -Name $publicIpAddressName `
     -ResourceGroupName $resourceGroupName `
     -Location $location `
-    -DomainNameLabel "${vmName}dns" `
+    -DomainNameLabel $vmName `
     -Sku Basic `
     -AllocationMethod Dynamic
 
